@@ -1,0 +1,21 @@
+hrs = input("Enter Hours:")
+rate = input("Enter Hourly Rate:")
+try:
+    fhrs = float(hrs)
+    frate = float(rate)
+except:
+    print("Error, please enter numeric input")
+    quit()
+
+if fhrs > 40 :
+    reg = frate * fhrs
+    otp = (frate * 0.5) * (fhrs-40.0)
+    tpay = reg + otp
+else:
+    reg = frate * fhrs
+    otp = 0
+    tpay = frate * fhrs
+pay = fhrs * frate
+print ('Regular Pay:',reg)
+print ('Overtime Pay:',otp)
+print ('Total Pay:',tpay)
